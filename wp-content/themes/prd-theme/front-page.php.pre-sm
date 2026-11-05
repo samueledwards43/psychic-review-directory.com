@@ -1,0 +1,184 @@
+<?php get_header(); ?>
+
+<?php
+$img = PRD_URI . '/assets/images';
+?>
+
+<!-- SECTION 1: HERO -->
+<section class="hero" id="hero">
+    <div class="hero__bg">
+        <img src="<?php echo esc_url( $img . '/hero_candles.jpg' ); ?>" alt="Mystical candles" class="lavender-grade">
+        <div class="hero__bg-overlay"></div>
+    </div>
+    <div class="hero__content">
+        <div class="hero__grid">
+            <div class="hero__text">
+                <h1>Find<br>Clarity</h1>
+                <p>Compare trusted psychic readers, real reviews, and honest ratings.</p>
+            </div>
+            <div class="hero__image">
+                <img src="<?php echo esc_url( $img . '/hero_candles.jpg' ); ?>" alt="Mystical ritual" class="lavender-grade">
+            </div>
+        </div>
+        <div class="hero__cta">
+            <a href="#platforms" class="btn btn--primary btn--lg">Explore Readers</a>
+            <a href="#methods" class="btn btn--secondary btn--lg">How it Works</a>
+        </div>
+        <p class="hero__micro micro-label">Independent reviews since 2021</p>
+    </div>
+    <div class="traveling-orb" style="left:28vw;top:44vh" aria-hidden="true"></div>
+</section>
+
+<!-- SECTION 2: PLATFORM SPOTLIGHT -->
+<section class="section-pinned platform-spotlight" id="platforms">
+    <div class="platform-spotlight__glow"></div>
+    <div class="platform-spotlight__headline">
+        <h2>A Platform Built For Real Answers</h2>
+        <p>Live chat &bull; Phone &bull; Video</p>
+    </div>
+    <div class="platform-spotlight__portrait">
+        <img src="<?php echo esc_url( $img . '/platform_reader_portrait.jpg' ); ?>" alt="Psychic reader" class="lavender-grade">
+    </div>
+    <div class="platform-spotlight__cta">
+        <a href="#closing" class="btn btn--secondary">See top platforms</a>
+    </div>
+    <div class="traveling-orb traveling-orb--lg" style="left:50%;top:50%;transform:translate(-50%,-50%)" aria-hidden="true"></div>
+</section>
+
+<!-- SECTION 3: READER RATING -->
+<section class="section-pinned reader-rating" id="readers">
+    <div class="reader-rating__glow"></div>
+    <div class="reader-rating__portrait">
+        <img src="<?php echo esc_url( $img . '/reader_profile_1.jpg' ); ?>" alt="Verified reader" class="lavender-grade">
+    </div>
+    <div class="reader-rating__card glass-card">
+        <h3>Verified Reader Profiles</h3>
+        <p>Ratings from real clients. Specialties, style, and availability&mdash;at a glance.</p>
+        <div class="reader-rating__stars">
+            <?php echo prd_stars(5); ?>
+            <span class="micro-label">4.8 avg &bull; 12K+ reviews</span>
+        </div>
+    </div>
+    <div class="traveling-orb" style="left:46vw;top:46vh" aria-hidden="true"></div>
+</section>
+
+<!-- SECTION 4: TWO-UP COMPARISON 1 -->
+<?php get_template_part( 'template-parts/two-up', null, [
+    'headline' => 'Compare Readers Side By Side',
+    'caption'  => 'Tap any card to open the full review.',
+    'left'     => ['img' => $img . '/compare_reader_a.jpg', 'title' => 'Tarot &amp; Energy'],
+    'right'    => ['img' => $img . '/compare_reader_b.jpg', 'title' => 'Astrology &amp; Timing'],
+    'id'       => 'compare-1',
+]); ?>
+
+<!-- SECTION 5: RITUAL IMMERSION -->
+<?php get_template_part( 'template-parts/fullbleed', null, [
+    'bg'       => $img . '/ritual_fullbleed.jpg',
+    'position' => 'center',
+    'headline' => 'Readings That Respect Your Space',
+    'body'     => 'Private sessions, clear pricing, and a calm environment&mdash;so you can focus on what matters.',
+    'cta'      => 'Browse sessions',
+    'id'       => 'sessions',
+]); ?>
+
+<!-- SECTION 6: TWO-UP COMPARISON 2 -->
+<?php get_template_part( 'template-parts/two-up', null, [
+    'headline' => 'Choose By Specialty',
+    'left'     => ['img' => $img . '/compare_reader_c.jpg', 'title' => 'Love &amp; Relationships'],
+    'right'    => ['img' => $img . '/compare_reader_d.jpg', 'title' => 'Career &amp; Life Path'],
+    'id'       => 'compare-2',
+]); ?>
+
+<!-- SECTION 7: HONEST REVIEWS -->
+<?php get_template_part( 'template-parts/fullbleed', null, [
+    'bg'       => $img . '/reader_fullbleed_left.jpg',
+    'position' => 'left',
+    'headline' => 'Honest Reviews, Always',
+    'body'     => 'We verify feedback and highlight what readers do best&mdash;so you can book with confidence.',
+    'micro'    => 'Updated weekly',
+    'id'       => 'reviews',
+]); ?>
+
+<!-- SECTION 8: TWO-UP COMPARISON 3 -->
+<?php get_template_part( 'template-parts/two-up', null, [
+    'headline' => 'Find Your Connection',
+    'left'     => ['img' => $img . '/compare_reader_e.jpg', 'title' => 'Mediumship'],
+    'right'    => ['img' => $img . '/compare_reader_f.jpg', 'title' => 'Intuitive Guidance'],
+    'id'       => 'compare-3',
+]); ?>
+
+<!-- SECTION 9: TAROT & BEYOND -->
+<?php get_template_part( 'template-parts/fullbleed', null, [
+    'bg'       => $img . '/tarot_fullbleed_right.jpg',
+    'position' => 'right',
+    'headline' => 'Tarot, Astrology &amp; Beyond',
+    'body'     => 'Explore different tools. See how each reader works&mdash;and pick the style that fits you.',
+    'cta'      => 'Explore methods',
+    'id'       => 'methods',
+]); ?>
+
+<!-- SECTION 10: TWO-UP COMPARISON 4 -->
+<?php get_template_part( 'template-parts/two-up', null, [
+    'headline' => 'Compare And Decide',
+    'left'     => ['img' => $img . '/compare_reader_g.jpg', 'title' => 'Chat Readings'],
+    'right'    => ['img' => $img . '/compare_reader_h.jpg', 'title' => 'Phone &amp; Video'],
+    'id'       => 'compare-4',
+]); ?>
+
+<!-- SECTION 11: CRYSTAL GUIDANCE -->
+<?php get_template_part( 'template-parts/fullbleed', null, [
+    'bg'       => $img . '/crystal_fullbleed_left.jpg',
+    'position' => 'left',
+    'headline' => 'Guidance When You Need It',
+    'body'     => 'Same-day availability, transparent pricing, and a focus on what&#039;s actually useful.',
+    'cta'      => 'Check availability',
+    'id'       => 'availability',
+]); ?>
+
+<!-- SECTION 12: CLOSING CTA -->
+<section class="closing" id="closing">
+    <div class="closing__glow"></div>
+    <div class="closing__inner">
+        <div class="closing__headline">
+            <h2>Ready to find your reader?</h2>
+            <p>Start with top-rated platforms, compare styles, and book in minutes.</p>
+        </div>
+        <div class="closing__grid">
+            <div class="platform-card">
+                <div class="platform-card__icon"><?php echo prd_icon('message'); ?></div>
+                <h3>MysticLine</h3>
+                <p>Live chat &amp; phone</p>
+                <a href="<?php echo esc_url( home_url( '/reviews/mysticline/' ) ); ?>">View reviews</a>
+            </div>
+            <div class="platform-card">
+                <div class="platform-card__icon"><?php echo prd_icon('video'); ?></div>
+                <h3>StarCall</h3>
+                <p>Video &amp; appointments</p>
+                <a href="<?php echo esc_url( home_url( '/reviews/starcall/' ) ); ?>">View reviews</a>
+            </div>
+            <div class="platform-card">
+                <div class="platform-card__icon"><?php echo prd_icon('phone'); ?></div>
+                <h3>AuraChat</h3>
+                <p>Chat-only, 24/7</p>
+                <a href="<?php echo esc_url( home_url( '/reviews/aurachat/' ) ); ?>">View reviews</a>
+            </div>
+        </div>
+        <div class="closing__contact">
+            <div class="closing__contact-row">
+                <a href="mailto:support@psychicdirectory.com">
+                    <?php echo prd_icon('mail'); ?>
+                    <span>support@psychicdirectory.com</span>
+                </a>
+                <span>
+                    <?php echo prd_icon('map-pin'); ?>
+                    <span>1200 Insight Ave, Suite 400, Portland, OR 97205</span>
+                </span>
+            </div>
+            <p class="closing__disclaimer">Reviews are for informational purposes only. Psychic readings are not a substitute for professional advice.</p>
+            <p class="closing__copyright">&copy; <?php echo date('Y'); ?> Psychic Directory. Independent reviews since 2021.</p>
+        </div>
+    </div>
+</section>
+
+<?php /* homeblocks-slot */ if ( function_exists( 'hb_render_home_blocks' ) ) { hb_render_home_blocks(); } ?>
+<?php get_footer(); ?>
